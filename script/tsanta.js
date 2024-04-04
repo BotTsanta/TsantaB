@@ -25,7 +25,7 @@ module.exports.run = async function ({ api, event, args }) {
             return api.sendMessage('💡TsantaBot : bit.ly/tsantabot \n━━━━━━━\n➤ Info: Discutez avec Tsanta simple Ai.\n➤ Usage: Tsanta + question \n➤ Ex: Tsanta Comment allez-vous?', event.threadID, messageID);
         }
 
-        const gpt4_api = `https://ai-chat-gpt-4-lite.onrender.com/api/hercai?question=${encodeURIComponent(prompt)}`;
+        const gpt4_api = `https://lianeapi.onrender.com/@hercai/api/Herc.ai?key=j86bwkwo-8hako-12C&userName=${encodeURIComponent(name || "a user")}&query=${encodeURIComponent(query)}`;
 
         const response = await axios.get(gpt4_api);
 
